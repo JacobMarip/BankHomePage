@@ -1,6 +1,6 @@
 const menuBtn = document.querySelector(".menu-btn");
 const menuBtn2 = document.querySelector(".menu-btn2");
-const rqBtn = document.querySelector(".request-btn");
+const rqBtn = document.querySelectorAll(".request-btn");
 const navigation = document.querySelector(".navigation");
 const closeWindow = document.querySelector(".close-window");
 const formWindow = document.querySelector(".section-login");
@@ -27,7 +27,9 @@ closeWindow.onclick = () => {
   closeMenu();
 };
 
-rqBtn.onclick = () => {
-  formWindow.classList.toggle("section-login-active");
-  closeWindow.style.display = "block";
-};
+rqBtn.forEach((e) => {
+  e.onclick = () => {
+    formWindow.classList.toggle("section-login-active");
+    closeWindow.style.display = "block";
+  };
+});
