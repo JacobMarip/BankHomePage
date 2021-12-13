@@ -68,6 +68,7 @@ header nav {
   /* top: 0; */
   background-color: white;
   box-shadow: 0 0 5px rgba(100, 100, 100, 0.3);
+  z-index: 1;
 }
 .nav-container {
   display: flex;
@@ -600,7 +601,7 @@ footer {
     max-width: 350px;
     min-width: auto;
     height: 100vh;
-    z-index: 100;
+    z-index: 2;
   }
   /* active animation */
   .navigation {
@@ -614,10 +615,7 @@ footer {
     margin: 0 15px;
     font-size: 1.2rem;
   }
-  .navigation a:nth-child(2) {
-    /* border-top: 1px solid rgba(150, 150, 150, 0.5); */
-    /* margin-top: 10px; */
-  }
+
   .navigation a:hover {
     background: linear-gradient(30deg, var(--pri-color), var(--sec-color));
     opacity: 0.85;
